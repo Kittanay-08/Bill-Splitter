@@ -1,0 +1,137 @@
+/* ล้างค่าเริ่มต้น (Reset Styles) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+/* พื้นหลังไล่เฉดสีนุ่มนวลแบบโมเดิร์น */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* การ์ดสไตล์ Glassmorphism (โปร่งแสง หรูหรา) */
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+h2 {
+    color: #4a5568;
+    margin-bottom: 8px;
+    font-size: 28px;
+}
+
+.subtitle {
+    color: #718096;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* การจัดวางช่องกรอกข้อมูล */
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    color: #4a5568;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* เอฟเฟกต์ตอนกดเลือกช่องอินพุต */
+input:focus, select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+/* ปุ่มกดไล่สี */
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* กล่องแสดงผลลัพธ์ */
+.result-box {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f7fafc;
+    border-radius: 12px;
+    border-left: 5px solid #667eea;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #4a5568;
+}
+
+.result-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px dashed #e2e8f0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.highlight {
+    color: #764ba2;
+}
+
+/* คลาสสำหรับซ่อนองค์ประกอบ */
+.hidden {
+    display: none;
+}
+
+/* Animation ตอนแสดงผลลัพธ์ */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
